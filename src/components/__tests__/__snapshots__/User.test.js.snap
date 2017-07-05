@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`User links to the user page 1`] = `
+<div
+  className="User"
+>
+  <a
+    onClick={[Function]}
+    style={Object {}}
+  >
+    <img
+      alt="jean_moust"
+      height="72"
+      src="moustiswag.png"
+      width="72"
+    />
+    <h3>
+      jean_moust
+       
+      <span>
+        (
+        Jean De la Moustinière
+        )
+      </span>
+    </h3>
+  </a>
+</div>
+`;
