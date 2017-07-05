@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`loadUser action should dispatch a fetchUser action when needed 1`] = `
+Object {
+  "Call API": Object {
+    "endpoint": "users/jean_moust",
+    "schema": EntitySchema {
+      "_getId": [Function],
+      "_idAttribute": [Function],
+      "_key": "users",
+      "_mergeStrategy": [Function],
+      "_processStrategy": [Function],
+      "schema": Object {},
+    },
+    "types": Array [
+      "USER_REQUEST",
+      "USER_SUCCESS",
+      "USER_FAILURE",
+    ],
+  },
+}
+`;
+
+exports[`loadUser action should dispatch a fetchUser action when needed 2`] = `null`;
+
+exports[`loadUser action should dispatch a fetchUser action when needed 3`] = `
+Object {
+  "Call API": Object {
+    "endpoint": "users/jean_moust",
+    "schema": EntitySchema {
+      "_getId": [Function],
+      "_idAttribute": [Function],
+      "_key": "users",
+      "_mergeStrategy": [Function],
+      "_processStrategy": [Function],
+      "schema": Object {},
+    },
+    "types": Array [
+      "USER_REQUEST",
+      "USER_SUCCESS",
+      "USER_FAILURE",
+    ],
+  },
+}
+`;
