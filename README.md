@@ -1,11 +1,11 @@
-# test-anything
+# Jest do it
 
-[![NPM](https://nodei.co/npm/test-anything.png)](https://nodei.co/npm/test-anything/)
+[![NPM](https://nodei.co/npm/jest-do-it.png)](https://nodei.co/npm/jest-do-it/)
 
-**Learn to test anything with TAP.**
+**Learn to test anything with Jest.**
 
 
 1. Install [Node.js](http://nodejs.org/)
-2. Run `sudo npm install test-anything -g`
-3. Run `test-anything`
+2. Run `sudo npm install jest-do-it -g`
+3. Run `jest-do-it`
 4. Select an exercise and go ahead :)
