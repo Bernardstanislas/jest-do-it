@@ -13,8 +13,8 @@ exports.execTest = function (dir, failFiles, passFile, args, t) {
   var solutionFile = args[0]
 
   failFiles.forEach(function (testFile) {
-    var program = fork(path.join(process.cwd(), solutionFile),
-      [ path.join(dir, 'tests', testFile) ],
+    var program = fork(path.join(process.cwd(), 'node_modules/.bin/jest'),
+      [ solutionFile, path.join(dir, 'tests', testFile) ],
       {silent: true})
 
     program.on('close', function (code) {
@@ -22,8 +22,8 @@ exports.execTest = function (dir, failFiles, passFile, args, t) {
     })
   })
 
-  var program = fork(path.join(process.cwd(), solutionFile),
-    [ path.join(dir, 'tests', passFile) ],
+  var program = fork(path.join(process.cwd(), 'node_modules/.bin/jest'),
+      [ solutionFile, path.join(dir, 'tests', passFile) ],
     {silent: true})
 
   program.on('close', function (code) {
@@ -36,7 +36,7 @@ exports.execRun = function (args, dirname) {
   out += [
     'Create your own module (`metatest.js`) to test your test.',
     'Then run your code like this:',
-    '`node ' + args[0] + ' ./metatest.js`',
+    '`./node_modules/.bin/jest ' + args[0] + ' ./metatest.js`',
     'The `metatest.js` file could look like this to pass your',
     'tests:'
   ].join('\n')
