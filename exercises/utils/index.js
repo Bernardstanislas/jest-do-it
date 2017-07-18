@@ -12,22 +12,21 @@ exports.execTest = function (dir, failFiles, passFile, args, t) {
 
   var solutionFile = args[0]
 
-  failFiles.forEach(function (testFile) {
-    var program = fork(path.join(process.cwd(), 'node_modules/.bin/jest'),
-      [ solutionFile, path.join(dir, 'tests', testFile) ],
-      {silent: true})
-
-    program.on('close', function (code) {
-      t.ok(code, 'wrong function not accepted')
-    })
-  })
-
   var program = fork(path.join(process.cwd(), 'node_modules/.bin/jest'),
       [ solutionFile, path.join(dir, 'tests', passFile) ],
     {silent: true})
 
   program.on('close', function (code) {
     t.ok(!code, 'correct function accepted')
+    failFiles.forEach(function (testFile) {
+      var program = fork(path.join(process.cwd(), 'node_modules/.bin/jest'),
+        [ solutionFile, path.join(dir, 'tests', testFile) ],
+        {silent: true})
+
+      program.on('close', function (code) {
+        t.ok(code, 'wrong function not accepted')
+      })
+    })
   })
 }
 

@@ -17,6 +17,7 @@
       "expect",
       "jest",
       "fetch",
+      "beforeEach",
       "afterEach"
     ]
   },
@@ -28,6 +29,12 @@
       "/node_modules/",
       "/exercises/",
       "metatest"
+    ]
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "react"
     ]
   },
   "keywords": [
@@ -46,8 +53,16 @@
   "dependencies": {
     "adventure": "^2.11.0",
     "adventure-verify": "^2.2.0",
+    "babel-jest": "^20.0.3",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
     "cli-md": "^1.0.0",
+    "enzyme": "^2.9.1",
     "jest": "^20.0.4",
+    "prop-types": "^15.5.10",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-test-renderer": "^15.6.1",
     "workshopper-exercise": "^2.3.0"
   },
   "preferGlobal": true,
