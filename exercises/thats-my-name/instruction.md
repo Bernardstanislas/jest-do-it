@@ -46,3 +46,22 @@ wrapper.find('button').simulate('click')
 expect(onButtonClick.mock.call.length).to.equal(1)
 ```
 You can find the documentation for `mount` here: https://github.com/airbnb/enzyme/blob/master/docs/api/mount.md
+
+
+With Jest you can also go quicker testing objects by making snapshots of it.
+A snapshot is like a picture of what an object is at a precise moment. The next time your test runs, it will make a new snapshot of the object and compare it to the previous one. In case it differs, your test fails.
+You can use it as follows:
+```js
+import React from 'react';
+import Link from '../Link.react';
+import renderer from 'react-test-renderer';
+
+it('renders correctly', () => {
+  const tree = renderer.create(
+    <Link page="http://www.facebook.com">Facebook</Link>
+  ).toJSON();
+  expect(tree).toMatchSnapshot();
+});
+```
+
+See the documentation there: https://facebook.github.io/jest/docs/snapshot-testing.html
